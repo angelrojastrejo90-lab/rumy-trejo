@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUMY TREJO | Mármol, Granito, Cuarzo y Terrazo</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#E5C158',
+                            500: '#D4AF37',
+                            600: '#AA820A',
+                        },
+                        dark: {
+                            900: '#0F1012',
+                            800: '#181A1E',
+                            700: '#23272F',
+                            600: '#2D323E'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .marble-gradient {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(15, 16, 18, 0.95) 100%);
+        }
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(15, 16, 18, 0.75), rgba(15, 16, 18, 0.95)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+        .clean-img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-200 font-sans antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Header / Navegación -->
+    <header class="fixed w-full z-40 bg-dark-900/90 backdrop-blur-md border-b border-dark-700 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo RUMY TREJO -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="https://i.postimg.cc/MT5xRbZd/Whats-App-Image-2026-09-24-at-20-39-35.jpg" 
+                     alt="RUMY TREJO Logo" 
+                     class="h-12 w-auto max-w-[160px] object-contain rounded-lg border border-gold-500/30 group-hover:scale-105 transition-transform shadow-md">
+                <div>
+                    <span class="font-serif text-lg sm:text-2xl font-black tracking-wider text-white block group-hover:text-gold-400 transition-colors leading-tight">
+                        RUMY TREJO
+                    </span>
+                    <span class="text-[9px] sm:text-[11px] tracking-widest text-gold-400 uppercase block font-semibold">
+                        Mármol • Granito • Cuarzo • Terrazo
+                    </span>
+                </div>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#inicio" class="hover:text-gold-400 transition-colors">Inicio</a>
+                <a href="#materiales" class="hover:text-gold-400 transition-colors">Materiales</a>
+                <a href="#servicios" class="hover:text-gold-400 transition-colors">Servicios</a>
+                
+                <!-- Accesos directos a Galería -->
+                <div class="relative group py-2">
+                    <a href="#galeria" class="hover:text-gold-400 transition-colors flex items-center gap-1">
+                        Proyectos <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+                    </a>
+                    <div class="absolute top-full left-0 hidden group-hover:block w-48 bg-dark-800 border border-dark-700 rounded-xl shadow-2xl p-2 z-50">
+                        <button class="nav-filter-btn w-full text-left px-3 py-2 text-xs hover:bg-dark-700 hover:text-gold-400 rounded-lg transition-colors" data-category="escaleras">
+                            <i data-lucide="layers" class="w-3.5 h-3.5 inline mr-1"></i> Escaleras
+                        </button>
+                        <button class="nav-filter-btn w-full text-left px-3 py-2 text-xs hover:bg-dark-700 hover:text-gold-400 rounded-lg transition-colors" data-category="cocinas">
+                            <i data-lucide="chef-hat" class="w-3.5 h-3.5 inline mr-1"></i> Cocinas
+                        </button>
+                        <button class="nav-filter-btn w-full text-left px-3 py-2 text-xs hover:bg-dark-700 hover:text-gold-400 rounded-lg transition-colors" data-category="banos">
+                            <i data-lucide="bath" class="w-3.5 h-3.5 inline mr-1"></i> Baños
+                        </button>
+                    </div>
+                </div>
+
+                <a href="#cotizador" class="hover:text-gold-400 transition-colors">Cotizador</a>
+                <a href="#opiniones" class="hover:text-gold-400 transition-colors">Opiniones</a>
+                <a href="#faq" class="hover:text-gold-400 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- Botón WhatsApp Header -->
+            <div class="hidden md:flex items-center">
+                <a href="https://wa.me/51994064958?text=Hola%20RUMY%20TREJO,%20deseo%20informaci%C3%B3n%20sobre%20sus%20servicios" 
+                   target="_blank" 
+                   class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg font-medium text-sm transition-all transform hover:-translate-y-0.5 shadow-lg shadow-emerald-900/30">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Consultar por WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Botón Menú Mobile -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Menú desplegable Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-dark-700 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="block py-2 text-base font-medium hover:text-gold-400">Inicio</a>
+            <a href="#materiales" class="block py-2 text-base font-medium hover:text-gold-400">Materiales</a>
+            <a href="#servicios" class="block py-2 text-base font-medium hover:text-gold-400">Servicios</a>
+            
+            <div class="border-t border-dark-700 pt-2 pb-1">
+                <p class="text-xs text-gold-400 uppercase font-semibold mb-2">Categorías de Proyectos</p>
+                <button class="nav-filter-btn block w-full text-left py-1.5 text-sm text-gray-300 hover:text-white" data-category="escaleras">• Escaleras de Mármol/Granito</button>
+                <button class="nav-filter-btn block w-full text-left py-1.5 text-sm text-gray-300 hover:text-white" data-category="cocinas">• Tableros e Islas de Cocina</button>
+                <button class="nav-filter-btn block w-full text-left py-1.5 text-sm text-gray-300 hover:text-white" data-category="banos">• Baños y Muebles</button>
+            </div>
+
+            <a href="#cotizador" class="block py-2 text-base font-medium hover:text-gold-400">Cotizador</a>
+            <a href="#opiniones" class="block py-2 text-base font-medium hover:text-gold-400">Opiniones</a>
+            <a href="#faq" class="block py-2 text-base font-medium hover:text-gold-400">FAQ</a>
+            
+            <a href="https://wa.me/51994064958?text=Hola%20RUMY%20TREJO,%20deseo%20informaci%C3%B3n%20sobre%20sus%20servicios" 
+               target="_blank" 
+               class="flex items-center justify-center gap-2 bg-emerald-600 text-white py-3 rounded-lg font-semibold w-full mt-2">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Escribir al WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/30 px-3.5 py-1.5 rounded-full text-gold-400 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                        <i data-lucide="shield-check" class="w-4 h-4"></i>
+                        Especialistas en Piedra Natural, Cuarzo y Terrazo
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+                        RUMY TREJO <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-yellow-200 to-gold-500 text-2xl sm:text-4xl lg:text-5xl">
+                            Elegancia y Durabilidad a la Medida
+                        </span>
+                    </h1>
+
+                    <div class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed space-y-3">
+                        <p>
+                            Somos especialistas en acabados en mármol, granito, cuarzo, piedra sinterizada y Dekton, ofreciendo soluciones a medida para proyectos residenciales y comerciales.
+                        </p>
+                        <p>
+                            Realizamos fabricación e instalación de escaleras, tableros, encimeras, revestimientos y pisos, además de trabajos en terrazo pulido y vitrificado.
+                        </p>
+                        <p>
+                            Nos enfocamos en brindar acabados de alta calidad, precisión y durabilidad, cuidando cada detalle desde la medición y fabricación hasta la instalación y acabado final.
+                        </p>
+                    </div>
+
+                    <!-- CTAs Hero -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#cotizador" class="w-full sm:w-auto bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-black font-bold px-8 py-4 rounded-xl text-center shadow-xl hover:shadow-gold-500/20 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <i data-lucide="calculator" class="w-5 h-5"></i>
+                            Cotizar Mi Proyecto
+                        </a>
+                        <a href="#galeria" class="w-full sm:w-auto bg-dark-800/80 hover:bg-dark-700 text-white border border-dark-600 font-semibold px-8 py-4 rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="eye" class="w-5 h-5"></i>
+                            Ver Trabajos Realizados
+                        </a>
+                    </div>
+
+                    <!-- Insignias de Confianza -->
+                    <div class="pt-8 border-t border-dark-700/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl font-bold font-serif text-white">100%</p>
+                            <p class="text-xs text-gray-400">Garantía en Instalación</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold font-serif text-gold-400">Medida</p>
+                            <p class="text-xs text-gray-400">Corte de Precisión</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold font-serif text-white">Directo</p>
+                            <p class="text-xs text-gray-400">Trato Sin Intermediarios</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta destacada Hero -->
+                <div class="lg:col-span-5">
+                    <div class="bg-dark-800/90 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-dark-600 shadow-2xl relative gold-border-glow">
+                        <div class="absolute -top-3 -right-3 bg-gold-500 text-black font-bold text-xs uppercase px-3 py-1 rounded-full shadow">
+                            Atención Inmediata
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-white mb-2 flex items-center gap-2">
+                            <i data-lucide="sparkles" class="text-gold-400 w-5 h-5"></i>
+                            ¿Tienes un plano o medida?
+                        </h3>
+                        <p class="text-sm text-gray-300 mb-6">
+                            Envíanos una foto, dibujo o medidas aproximadas por WhatsApp y te damos una estimación sin compromiso en minutos.
+                        </p>
+
+                        <div class="space-y-3 mb-6 text-sm">
+                            <div class="flex items-center gap-3 text-gray-300">
+                                <i data-lucide="check-circle" class="text-gold-400 w-4 h-4 flex-shrink-0"></i>
+                                <span>Asesoría directa del maestro instalador.</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-300">
+                                <i data-lucide="check-circle" class="text-gold-400 w-4 h-4 flex-shrink-0"></i>
+                                <span>Visita técnica de rectificación sin costo.</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-300">
+                                <i data-lucide="check-circle" class="text-gold-400 w-4 h-4 flex-shrink-0"></i>
+                                <span>Trabajos limpios y con acabados pulidos.</span>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/51994064958?text=Hola%20RUMY%20TREJO,%20tengo%20unas%20medidas%20para%20una%20cotizaci%C3%B3n" 
+                           target="_blank"
+                           class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg transition-colors text-sm">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                            Enviar Medidas por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Materiales -->
+    <section id="materiales" class="py-20 bg-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-400 mb-2">Conoce Nuestras Piedras</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Guía de Materiales y Aplicaciones</p>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-400 mt-4 text-sm sm:text-base">
+                    En <strong>RUMY TREJO</strong> te orientamos para que elijas la mejor opción según el uso, estética y presupuesto que requieres.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card Mármol -->
+                <div class="bg-dark-900 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 flex flex-col group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Mármol" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Piedra Natural
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-serif font-bold text-white mb-2">MÁRMOL</h3>
+                            <p class="text-gold-400 font-medium text-xs mb-4">Elegancia Clásica & Vetas Únicas</p>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                Ideal para espacios donde se busca máximo lujo visual. Cada pieza posee vetas irrepetibles que aportan distinción incomparable.
+                            </p>
+                            
+                            <div class="space-y-2 mb-6 text-xs">
+                                <div class="flex items-center text-gray-300 gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold-400"></i>
+                                    <span><strong>Ideal para:</strong> Baños, escaleras interiores, muros decorativos.</span>
+                                </div>
+                                <div class="flex items-center text-gray-300 gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold-400"></i>
+                                    <span><strong>Ventaja:</strong> Belleza intemporal y alto valor estético.</span>
+                                </div>
+                                <div class="flex items-center text-gray-300 gap-2">
+                                    <i data-lucide="info" class="w-4 h-4 text-amber-400"></i>
+                                    <span><strong>Cuidado:</strong> Requiere limpieza con productos neutros.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/51994064958?text=Hola%20RUMY%20TREJO,%20me%20interesa%20un%20trabajo%20en%20M%C3%81RMOL" 
+                           target="_blank"
+                           class="w-full py-2.5 bg-dark-800 hover:bg-gold-500 hover:text-black border border-dark-600 text-white font-semibold rounded-lg text-xs text-center transition-all flex items-center justify-center gap-2">
+                            Cotizar en Mármol
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Granito -->
+                <div class="bg-dark-900 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 flex flex-col group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80" alt="Granito" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Alta Durabilidad
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-serif font-bold text-white mb-2">GRANITO</h3>
+                            <p class="text-gold-400 font-medium text-xs mb-4">Resistencia Extrema & Uso Rudo</p>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                La roca natural más fuerte para el hogar. Altamente resistente al calor, ralladuras y golpes. Perfecto para el día a día.
+                            </p>
+                            
+                            <div class="space-y-2 mb-6 text-xs">
+                                <div class="flex items-center text-gray-300 gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold-400"></i>
+                                    <span><strong>Ideal para:</strong> Tableros de cocina, pisos, escaleras exteriores.</span>
+                                </div>
+                                <div class="flex items-center text-gray-300 gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold-400"></i>
+                                    <span><strong>Ventaja:</strong> Soporta ollas calientes y alto tránsito.</span>
+                                </div>
+                                <div class="flex items-center text-gray-300 gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold-400"></i>
+                                    <span><strong>Mantenimiento:</strong> Muy bajo y fácil de limpiar.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/51994064958?text=Hola%20RUMY%20TREJO,%20me%20interesa%20un%20trabajo%20en%20GRANITO" 
+                           target="_blank"
+                           class="w-full py-2.5 bg-dark-800 hover:bg-gold-500 hover:text-black border border-dark-600 text-white font-semibold rounded-lg text-xs text-center transition-all flex items-center justify-center gap-2">
+                            Cotizar en Granito
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Cuarzo -->
+                <div class="bg-dark-900 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 flex flex-col group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Cuarzo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Diseño Moderno
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-serif font-bold text-white mb-2">CUARZO</h3>
+                            <p class="text-gold-400 font-medium text-xs mb-4">Cero Porosidad & Colores Uniformes</p>
+                            <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                Piedra de ingeniería de acabado moderno e higiénico. No absorbe líquidos, evitando bacterias y manchas difíciles.
+                            </p>
+                            
+                            <div class="space-y-2 mb-6 text-xs">
+                                <div class="flex items-center text-gray-300 gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold-400"></i>
+                                    <span><strong>Ideal para:</strong> Cocinas modernas, tableros de baño minimalistas.</span>
+                                </div>
+                                <div class="flex items-center text-gray-300 gap-2">
+                                    <i data-lucide="check" class="w-4 h-4 text-gold-400"></i>
+                                    <span><strong>Ventaja:</strong> Cero absorción de vino, aceite o café.</span>
+                                </div>
+                                <div class="flex items-center text-gray-300 gap-2">
+                                    <i data-lucide="info" class="w-4 h-4 text-amber-400"></i>
+                                    <span><strong>Cuidado:</strong> Usar posaplatos para utensilios hirviendo.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/51994064958?text=Hola%20RUMY%20TREJO,%20me%20interesa%20un%20trabajo%20en%20CUARZO" 
+                           target="_blank"
+                           class="w-full py-2.5 bg-dark-800 hover:bg-gold-500 hover:text-black border border-dark-600 text-white font-semibold rounded-lg text-xs text-center transition-all flex items-center justify-center gap-2">
+                            Cotizar en Cuarzo
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="py-20 bg-dark-900 border-t border-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-400 mb-2">Especialidades</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Servicios de Fabricación e Instalación</p>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Servicio 1: Escaleras -->
+                <div class="bg-dark-800 p-6 rounded-2xl border border-dark-700 hover:border-gold-500 transition-all hover:-translate-y-1 cursor-pointer nav-filter-btn" data-category="escaleras">
+                    <div class="w-12 h-12 bg-gold-500/10 text-gold-400 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="layers" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2">Escaleras de Piedra</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Pasos, contrapasos y zócalos a la medida. Acabados biselados, boleados y antideslizantes para interiores y exteriores.
+                    </p>
+                    <span class="text-xs font-semibold text-gold-400 flex items-center gap-1">Ver fotos de escaleras <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </div>
+
+                <!-- Servicio 2: Tableros de Cocina -->
+                <div class="bg-dark-800 p-6 rounded-2xl border border-dark-700 hover:border-gold-500 transition-all hover:-translate-y-1 cursor-pointer nav-filter-btn" data-category="cocinas">
+                    <div class="w-12 h-12 bg-gold-500/10 text-gold-400 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="chef-hat" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2">Tableros de Cocina</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Mesones con perforaciones precisas para lavaderos submontados, encastres de cocina, zócalos y faldones.
+                    </p>
+                    <span class="text-xs font-semibold text-gold-400 flex items-center gap-1">Ver fotos de cocinas <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </div>
+
+                <!-- Servicio 3: Baños -->
+                <div class="bg-dark-800 p-6 rounded-2xl border border-dark-700 hover:border-gold-500 transition-all hover:-translate-y-1 cursor-pointer nav-filter-btn" data-category="banos">
+                    <div class="w-12 h-12 bg-gold-500/10 text-gold-400 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="bath" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2">Muebles & Ovalines</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Tableros de baño, ovalines tallados en piedra natural y revestimientos impermeables para duchas y muros.
+                    </p>
+                    <span class="text-xs font-semibold text-gold-400 flex items-center gap-1">Ver fotos de baños <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </div>
+
+                <!-- Servicio 4: Pisos y Enchapes -->
+                <div class="bg-dark-800 p-6 rounded-2xl border border-dark-700 hover:border-gold-500 transition-all hover:-translate-y-1 cursor-pointer nav-filter-btn" data-category="all">
+                    <div class="w-12 h-12 bg-gold-500/10 text-gold-400 rounded-xl flex items-center justify-center mb-5">
+                        <i data-lucide="grid" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2">Pisos y Terrazos</h3>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                        Instalación y vaciado de terrazzo, baldosas de mármol o granito con nivelación profesional, fraguado sellado y pulido final.
+                    </p>
+                    <span class="text-xs font-semibold text-gold-400 flex items-center gap-1">Ver portafolio <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cotizador Interactivo -->
+    <section id="cotizador" class="py-20 bg-dark-800 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-b from-dark-900 to-dark-800 border border-gold-500/40 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-48 h-48 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center mb-8">
+                    <span class="inline-flex items-center gap-1.5 bg-gold-500/20 text-gold-400 text-xs font-semibold px-3 py-1 rounded-full uppercase mb-3">
+                        <i data-lucide="calculator" class="w-3.5 h-3.5"></i> Cotizador Rápido
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white">Calcula tu Proyecto</h2>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-2">Completa estos pasos sencillos y recibe tu propuesta directamente en WhatsApp</p>
+                </div>
+
+                <form id="calc-form" class="space-y-6">
+                    
+                    <!-- Paso 1: Tipo de Proyecto -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-200 mb-3">1. ¿Qué proyecto deseas realizar?</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="proyecto" value="Escalera" class="peer hidden" checked>
+                                <div class="p-3 text-center rounded-xl bg-dark-700 border border-dark-600 peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-400 transition-all text-xs sm:text-sm font-medium">
+                                    Escalera
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="proyecto" value="Tablero de Cocina" class="peer hidden">
+                                <div class="p-3 text-center rounded-xl bg-dark-700 border border-dark-600 peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-400 transition-all text-xs sm:text-sm font-medium">
+                                    Tablero Cocina
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="proyecto" value="Mueble de Baño" class="peer hidden">
+                                <div class="p-3 text-center rounded-xl bg-dark-700 border border-dark-600 peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-400 transition-all text-xs sm:text-sm font-medium">
+                                    Mueble Baño
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="proyecto" value="Piso / Terrazo" class="peer hidden">
+                                <div class="p-3 text-center rounded-xl bg-dark-700 border border-dark-600 peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-400 transition-all text-xs sm:text-sm font-medium">
+                                    Pisos / Terrazos
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Paso 2: Elección de Material -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-200 mb-3">2. Selecciona el Material de preferencia</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="material" value="Mármol" class="peer hidden" checked>
+                                <div class="p-3 text-center rounded-xl bg-dark-700 border border-dark-600 peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-400 transition-all text-xs sm:text-sm font-medium">
+                                    Mármol
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="material" value="Granito" class="peer hidden">
+                                <div class="p-3 text-center rounded-xl bg-dark-700 border border-dark-600 peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-400 transition-all text-xs sm:text-sm font-medium">
+                                    Granito
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="material" value="Cuarzo" class="peer hidden">
+                                <div class="p-3 text-center rounded-xl bg-dark-700 border border-dark-600 peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-400 transition-all text-xs sm:text-sm font-medium">
+                                    Cuarzo
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="material" value="Terrazo" class="peer hidden">
+                                <div class="p-3 text-center rounded-xl bg-dark-700 border border-dark-600 peer-checked:border-gold-500 peer-checked:bg-gold-500/10 peer-checked:text-gold-400 transition-all text-xs sm:text-sm font-medium">
+                                    Terrazo
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3: Medidas Aprox -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="medidas" class="block text-sm font-semibold text-gray-200 mb-2">3. Medidas Aproximadas</label>
+                            <input type="text" id="medidas" placeholder="Ej: 15 pasos / 3.5 metros lineales" required
+                                   class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500">
+                        </div>
+                        <div>
+                            <label for="ubicacion" class="block text-sm font-semibold text-gray-200 mb-2">Distrito o Ciudad</label>
+                            <input type="text" id="ubicacion" placeholder="Ej: Miraflores, Lima" required
+                                   class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500">
+                        </div>
+                    </div>
+
+                    <!-- Paso 4: Detalle extra -->
+                    <div>
+                        <label for="detalles" class="block text-sm font-semibold text-gray-200 mb-2">Detalles adicionales (Opcional)</label>
+                        <textarea id="detalles" rows="2" placeholder="Ej: Incluir zócalo, color blanco carra, hueco para cocina empotrada..."
+                                  class="w-full bg-dark-700 border border-dark-600 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500"></textarea>
+                    </div>
+
+                    <!-- Botón Generar WhatsApp -->
+                    <button type="submit" 
+                            class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3 text-base cursor-pointer">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        Enviar Cotización por WhatsApp
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Galería Portafolio -->
+    <section id="galeria" class="py-20 bg-dark-900 border-t border-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-400 mb-2">Nuestra Experiencia</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Galería de Proyectos Realizados</p>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Botones Filtro -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10" id="filter-buttons">
+                <button class="filter-btn active bg-gold-500 text-black font-semibold text-xs px-5 py-2.5 rounded-full transition-all cursor-pointer shadow-md" data-filter="all">Todos los Trabajos</button>
+                <button class="filter-btn bg-dark-800 hover:bg-dark-700 text-gray-300 font-semibold text-xs px-5 py-2.5 rounded-full border border-dark-700 transition-all cursor-pointer" data-filter="escaleras"><i data-lucide="layers" class="w-3.5 h-3.5 inline mr-1"></i> Escaleras</button>
+                <button class="filter-btn bg-dark-800 hover:bg-dark-700 text-gray-300 font-semibold text-xs px-5 py-2.5 rounded-full border border-dark-700 transition-all cursor-pointer" data-filter="cocinas"><i data-lucide="chef-hat" class="w-3.5 h-3.5 inline mr-1"></i> Cocinas</button>
+                <button class="filter-btn bg-dark-800 hover:bg-dark-700 text-gray-300 font-semibold text-xs px-5 py-2.5 rounded-full border border-dark-700 transition-all cursor-pointer" data-filter="banos"><i data-lucide="bath" class="w-3.5 h-3.5 inline mr-1"></i> Baños</button>
+            </div>
+
+            <!-- Grid Galería -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+
+                <!-- Proyecto 1 - Escalera Real Foto 1 -->
+                <div class="gallery-item escaleras bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/gLw4gzV9/Whats-App-Image-2026-09-20-at-19-15-57-(3).jpg" 
+                             alt="Escalera de Piedra RUMY TREJO" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 clean-img"
+                             loading="lazy">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Escaleras
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-white text-base">Escalera con Pasos y Contrapasos</h3>
+                        <p class="text-xs text-gray-400 mt-1">Medidas exactas, pulido de precisión con zócalos al detalle.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 - Escalera Real Foto 2 -->
+                <div class="gallery-item escaleras bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/D4W5xvrk/Whats-App-Image-2026-09-20-at-19-16-02-(1).jpg" 
+                             alt="Escalera Acabado Fino RUMY TREJO" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 clean-img"
+                             loading="lazy">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Escaleras
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-white text-base">Escalera de Piedra Pulida</h3>
+                        <p class="text-xs text-gray-400 mt-1">Diseño elegante a la medida con bordes boleados y antideslizantes.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto Cocina Real 1 -->
+                <div class="gallery-item cocinas bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/ydjgdZMY/cocina-cuatro.jpg" 
+                             alt="Tablero de Cocina RUMY TREJO" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 clean-img"
+                             loading="lazy">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Cocinas
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-white text-base">Tablero de Cocina Pulido</h3>
+                        <p class="text-xs text-gray-400 mt-1">Fabricación e instalación a medida con bordes y zócalos de precisión.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto Cocina Real 2 -->
+                <div class="gallery-item cocinas bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/fLCtL9GL/cocina-tres.jpg" 
+                             alt="Isla y Mesón de Cocina RUMY TREJO" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 clean-img"
+                             loading="lazy">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Cocinas
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-white text-base">Isla y Mesón en Piedra</h3>
+                        <p class="text-xs text-gray-400 mt-1">Acabados pulidos para cocinas modernas con encastre impecable.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto Cocina Real 3 -->
+                <div class="gallery-item cocinas bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/769G62Fb/cocina-uno.jpg" 
+                             alt="Cocina de Mármol Granito RUMY TREJO" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 clean-img"
+                             loading="lazy">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Cocinas
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-white text-base">Revestimiento y Mesón de Cocina</h3>
+                        <p class="text-xs text-gray-400 mt-1">Elegancia y máxima resistencia para el uso diario en el hogar.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto Cocina Real 4 -->
+                <div class="gallery-item cocinas bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/JhbHfgKh/Chat-GPT-Image-24-sept-2026-09-05-26-p-m.png" 
+                             alt="Diseño Exclusivo Cocina RUMY TREJO" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 clean-img"
+                             loading="lazy">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Cocinas
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-white text-base">Tablero de Cocina Elegante</h3>
+                        <p class="text-xs text-gray-400 mt-1">Cortes limpios, biselado suave y protección contra salpicaduras.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto Cocina Real 5 -->
+                <div class="gallery-item cocinas bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.postimg.cc/QMpK2PSx/Whats-App-Image-2026-09-24-at-20-57-06.jpg" 
+                             alt="Cocina Personalizada RUMY TREJO" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 clean-img"
+                             loading="lazy">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Cocinas
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-white text-base">Tablero de Granito / Cuarzo para Cocina</h3>
+                        <p class="text-xs text-gray-400 mt-1">Instalación garantizada con sellado de alta durabilidad.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto Baño 1 -->
+                <div class="gallery-item banos bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" 
+                             alt="Mueble de Baño en Mármol RUMY TREJO" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 clean-img"
+                             loading="lazy">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Baños
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-white text-base">Tablero de Mármol con Ovalín</h3>
+                        <p class="text-xs text-gray-400 mt-1">Acabado higiénico e impermeable para baños principales y de visita.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto Baño 2 -->
+                <div class="gallery-item banos bg-dark-800 rounded-2xl overflow-hidden border border-dark-700 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" 
+                             alt="Revestimiento de Baño RUMY TREJO" 
+                             class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 clean-img"
+                             loading="lazy">
+                        <span class="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-gold-400 text-xs font-semibold px-3 py-1 rounded-full border border-gold-500/30">
+                            Baños
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif font-bold text-white text-base">Revestimiento Elegante para Ducha</h3>
+                        <p class="text-xs text-gray-400 mt-1">Cortes a medida con acabados pulidos de alta elegancia.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Opiniones / Testimonios -->
+    <section id="opiniones" class="py-20 bg-dark-800 border-t border-dark-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-400 mb-2">Clientes Satisfechos</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Lo que Dicen de Nuestro Trabajo</p>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Botón y Formulario Interactivo para Dejar Opinión -->
+            <div class="max-w-2xl mx-auto mb-12">
+                <div class="text-center mb-6">
+                    <button id="toggle-review-btn" type="button" class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-black font-bold px-6 py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 inline-flex items-center gap-2 cursor-pointer">
+                        <i data-lucide="star" class="w-5 h-5 fill-black"></i>
+                        <span>Escribir una Opinión / Calificar Servicio</span>
+                    </button>
+                </div>
+
+                <!-- Formulario desplegable -->
+                <div id="review-form-container" class="hidden bg-dark-900 p-6 sm:p-8 rounded-2xl border border-gold-500/40 shadow-2xl relative">
+                    <h3 class="text-xl font-serif font-bold text-white mb-2 text-center">¡Déjanos tu Opinión!</h3>
+                    <p class="text-xs text-gray-400 text-center mb-6">Califica nuestro trabajo y acabado en Mármol, Granito, Cuarzo o Terrazo.</p>
+
+                    <form id="review-form" class="space-y-5">
+                        <!-- Selector de Estrellas -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-2 text-center uppercase tracking-wider">Tu Calificación</label>
+                            <div class="flex items-center justify-center gap-2" id="star-rating-picker">
+                                <button type="button" data-rating="1" class="star-btn text-gold-400 p-1 transition-colors cursor-pointer">
+                                    <i data-lucide="star" class="w-8 h-8 fill-gold-400 pointer-events-none"></i>
+                                </button>
+                                <button type="button" data-rating="2" class="star-btn text-gold-400 p-1 transition-colors cursor-pointer">
+                                    <i data-lucide="star" class="w-8 h-8 fill-gold-400 pointer-events-none"></i>
+                                </button>
+                                <button type="button" data-rating="3" class="star-btn text-gold-400 p-1 transition-colors cursor-pointer">
+                                    <i data-lucide="star" class="w-8 h-8 fill-gold-400 pointer-events-none"></i>
+                                </button>
+                                <button type="button" data-rating="4" class="star-btn text-gold-400 p-1 transition-colors cursor-pointer">
+                                    <i data-lucide="star" class="w-8 h-8 fill-gold-400 pointer-events-none"></i>
+                                </button>
+                                <button type="button" data-rating="5" class="star-btn text-gold-400 p-1 transition-colors cursor-pointer">
+                                    <i data-lucide="star" class="w-8 h-8 fill-gold-400 pointer-events-none"></i>
+                                </button>
+                            </div>
+                            <input type="hidden" id="selected-rating" value="5">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="reviewer-name" class="block text-xs font-semibold text-gray-300 mb-1">Tu Nombre</label>
+                                <input type="text" id="reviewer-name" placeholder="Ej: Carlos Mendoza" required class="w-full bg-dark-800 border border-dark-600 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500">
+                            </div>
+                            <div>
+                                <label for="reviewer-location" class="block text-xs font-semibold text-gray-300 mb-1">Proyecto o Distrito</label>
+                                <input type="text" id="reviewer-location" placeholder="Ej: Cocina en San Borja" required class="w-full bg-dark-800 border border-dark-600 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="reviewer-comment" class="block text-xs font-semibold text-gray-300 mb-1">Tu Reseña o Comentario</label>
+                            <textarea id="reviewer-comment" rows="3" placeholder="Cuéntanos tu experiencia con el acabado, puntualidad y servicio de RUMY TREJO..." required class="w-full bg-dark-800 border border-dark-600 rounded-xl px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-gold-500"></textarea>
+                        </div>
+
+                        <div id="review-status-msg" class="hidden"></div>
+
+                        <div class="flex gap-3">
+                            <button type="submit" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm cursor-pointer">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                Publicar Opinión
+                            </button>
+                            <button type="button" id="cancel-review-btn" class="bg-dark-700 hover:bg-dark-600 text-gray-300 font-semibold py-3 px-4 rounded-xl transition-all text-sm cursor-pointer">
+                                Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Grid de Opiniones -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="reviews-grid">
+                <!-- Se cargan dinámicamente -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección FAQ (Preguntas Frecuentes) -->
+    <section id="faq" class="py-20 bg-dark-900 border-t border-dark-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-gold-400 mb-2">Respuestas Rápidas</h2>
+                <p class="text-3xl sm:text-4xl font-serif font-bold text-white">Preguntas Frecuentes</p>
+                <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6">
+                    <h3 class="text-lg font-serif font-semibold text-white flex items-center gap-3">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-gold-400 flex-shrink-0"></i>
+                        ¿Cómo solicito una cotización precisa?
+                    </h3>
+                    <p class="text-sm text-gray-300 mt-3 pl-8 leading-relaxed">
+                        Puedes enviarnos las medidas aproximadas, un plano simple o foto del espacio a través de nuestro cotizador o directo a nuestro WhatsApp (<strong>+51 994 064 958</strong>). Te enviaremos un presupuesto estimado al instante.
+                    </p>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6">
+                    <h3 class="text-lg font-serif font-semibold text-white flex items-center gap-3">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-gold-400 flex-shrink-0"></i>
+                        ¿Realizan rectificación de medidas a domicilio?
+                    </h3>
+                    <p class="text-sm text-gray-300 mt-3 pl-8 leading-relaxed">
+                        ¡Sí! Una vez aprobado el presupuesto inicial, agendamos una visita técnica a tu domicilio en Lima para rectificar las medidas milimétricamente antes del corte en taller.
+                    </p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6">
+                    <h3 class="text-lg font-serif font-semibold text-white flex items-center gap-3">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-gold-400 flex-shrink-0"></i>
+                        ¿Cuál es la diferencia entre Granito, Mármol y Cuarzo?
+                    </h3>
+                    <p class="text-sm text-gray-300 mt-3 pl-8 leading-relaxed">
+                        El <strong>Granito</strong> es ideal para cocinas de uso rudo por su resistencia al calor y rayaduras. El <strong>Mármol</strong> aporta elegancia clásica para baños y escaleras con vetas únicas. El <strong>Cuarzo</strong> es de ingeniería de alta gama, no poroso y de mantenimiento ultra fácil.
+                    </p>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-dark-800 border border-dark-700 rounded-2xl p-6">
+                    <h3 class="text-lg font-serif font-semibold text-white flex items-center gap-3">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-gold-400 flex-shrink-0"></i>
+                        ¿Cuánto demora la fabricación e instalación?
+                    </h3>
+                    <p class="text-sm text-gray-300 mt-3 pl-8 leading-relaxed">
+                        El tiempo promedio desde la toma de medidas finales hasta la instalación concluida es de <strong>3 a 6 días hábiles</strong>, según la complejidad del proyecto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Contacto Directo -->
+    <section class="py-16 bg-gradient-to-r from-dark-800 via-dark-900 to-dark-800 border-t border-dark-700 text-center">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white mb-4">
+                ¿Listo para renovar tu cocina, baño o escalera?
+            </h2>
+            <p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+                Ponte en contacto directo con los especialistas de <strong>RUMY TREJO</strong>. Te asesoramos sin costo en la elección del material y diseño.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/51994064958?text=Hola%20RUMY%20TREJO,%20deseo%20asesor%C3%ADa%20para%20un%20proyecto" 
+                   target="_blank"
+                   class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all flex items-center gap-3 text-base">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Escribir por WhatsApp (+51 994 064 958)
+                </a>
+                <a href="tel:+51994064958" 
+                   class="bg-dark-700 hover:bg-dark-600 border border-dark-600 text-white font-semibold px-8 py-4 rounded-xl transition-all flex items-center gap-3 text-base">
+                    <i data-lucide="phone" class="w-5 h-5 text-gold-400"></i>
+                    Llamar Directamente
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Principal -->
+    <footer class="bg-dark-900 border-t border-dark-800 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <!-- Col 1: Logo & Info -->
+            <div class="md:col-span-2 space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="https://i.postimg.cc/MT5xRbZd/Whats-App-Image-2026-09-24-at-20-39-35.jpg" 
+                         alt="RUMY TREJO Logo" 
+                         class="h-10 w-auto rounded border border-gold-500/30">
+                    <span class="font-serif text-xl font-bold text-white tracking-wider">RUMY TREJO</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed max-w-md">
+                    Especialistas en corte, fabricación e instalación de tableros de cocina, baños, escaleras y revestimientos en Mármol, Granito, Cuarzo y Terrazos. Trabajos de calidad con acabado profesional en Lima y provincias.
+                </p>
+            </div>
+
+            <!-- Col 2: Enlaces Rápidos -->
+            <div>
+                <h4 class="text-white font-serif font-semibold text-sm mb-4">Navegación</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#inicio" class="hover:text-gold-400 transition-colors">Inicio</a></li>
+                    <li><a href="#materiales" class="hover:text-gold-400 transition-colors">Materiales</a></li>
+                    <li><a href="#servicios" class="hover:text-gold-400 transition-colors">Servicios</a></li>
+                    <li><a href="#galeria" class="hover:text-gold-400 transition-colors">Proyectos</a></li>
+                    <li><a href="#cotizador" class="hover:text-gold-400 transition-colors">Cotizador</a></li>
+                    <li><a href="#opiniones" class="hover:text-gold-400 transition-colors">Opiniones</a></li>
+                    <li><a href="#faq" class="hover:text-gold-400 transition-colors">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Contacto -->
+            <div>
+                <h4 class="text-white font-serif font-semibold text-sm mb-4">Atención & Contacto</h4>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="phone" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
+                        <span>+51 994 064 958</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
+                        <span>Lima, Perú (Cobertura a todo Lima y Provincias)</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-lucide="clock" class="w-4 h-4 text-gold-400 flex-shrink-0"></i>
+                        <span>Lunes a Sábado: 8:00 am - 7:00 pm</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-dark-800 pt-6 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 RUMY TREJO. Todos los derechos reservados. Marmolería y Acabados Finos.</p>
+            <p class="text-gray-400">Mármol • Granito • Cuarzo • Terrazos</p>
+        </div>
+    </footer>
+
+    <!-- Modal Lightbox para ver la imagen completa sin recortar nada -->
+    <div id="image-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300">
+        <button id="modal-close-btn" aria-label="Cerrar imagen" class="absolute top-4 right-4 text-white hover:text-gold-400 p-2 rounded-full bg-dark-800/80 hover:bg-dark-700 transition-colors z-10 cursor-pointer shadow-lg">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="relative max-w-5xl max-h-full flex items-center justify-center">
+            <img id="modal-img" src="" alt="Vista ampliada" class="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl border border-gold-500/30">
+        </div>
+    </div>
+
+    <!-- Script de Aplicación -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
+            apiKey: "AIzaSyDemoConfigForGitHubPages",
+            authDomain: "rumy-trejo.firebaseapp.com",
+            projectId: "rumy-trejo",
+            storageBucket: "rumy-trejo.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:demo"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        const safeAppId = typeof appId !== 'undefined' ? appId : 'rumy-trejo-app';
+        const reviewsCollectionPath = collection(db, 'artifacts', safeAppId, 'public', 'data', 'opiniones');
+        let currentUser = null;
+        let isFirebaseAvailable = true;
+
+        async function initAuth() {
+            try {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+            } catch (e) {
+                isFirebaseAvailable = false;
+            }
+        }
+
+        onAuthStateChanged(auth, (user) => {
+            currentUser = user;
+            listenToReviews();
+        });
+
+        initAuth();
+
+        const defaultReviews = [
+            {
+                name: "Ricardo Cárdenas",
+                location: "Santiago de Surco, Lima",
+                comment: "El acabado de mi tablero de cocina en granito negro quedó impecable. Los cortes para la cocina empotrada y el lavadero quedaron exactos. Muy recomendados por su puntualidad.",
+                rating: 5,
+                initials: "RC"
+            },
+            {
+                name: "María Elena Vargas",
+                location: "La Molina, Lima",
+                comment: "Mandamos a hacer la escalera principal con mármol y zócalos boleados. El maestro Trejo vino personalmente a tomar las medidas y el resultado superó nuestras expectativas.",
+                rating: 5,
+                initials: "MV"
+            },
+            {
+                name: "Gustavo Aguilar",
+                location: "Miraflores, Lima",
+                comment: "Instalamos una isla de cuarzo blanco en la cocina. El sellado y los bordes pulidos le dieron un cambio total a la casa. Excelente atención por WhatsApp y precios justos.",
+                rating: 5,
+                initials: "GA"
+            }
+        ];
+
+        function getLocalReviews() {
+            try {
+                const stored = localStorage.getItem('rumy_trejo_opiniones');
+                return stored ? JSON.parse(stored) : [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function saveLocalReview(review) {
+            try {
+                const local = getLocalReviews();
+                local.unshift(review);
+                localStorage.setItem('rumy_trejo_opiniones', JSON.stringify(local));
+            } catch (e) {
+                console.warn("No se pudo guardar localmente:", e);
+            }
+        }
+
+        function renderAllReviews(remoteReviews = []) {
+            const reviewsGrid = document.getElementById('reviews-grid');
+            if (!reviewsGrid) return;
+
+            reviewsGrid.innerHTML = '';
+            const localReviews = getLocalReviews();
+            const combined = [...localReviews, ...remoteReviews];
+
+            if (combined.length > 0) {
+                combined.forEach(rev => {
+                    reviewsGrid.appendChild(createReviewCard(rev));
+                });
+            } else {
+                defaultReviews.forEach(rev => {
+                    reviewsGrid.appendChild(createReviewCard(rev));
+                });
+            }
+
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        }
+
+        function listenToReviews() {
+            if (!currentUser || !isFirebaseAvailable) {
+                renderAllReviews([]);
+                return;
+            }
+
+            try {
+                onSnapshot(reviewsCollectionPath, (snapshot) => {
+                    let remoteReviews = [];
+                    snapshot.forEach(doc => {
+                        remoteReviews.push({ id: doc.id, ...doc.data() });
+                    });
+                    remoteReviews.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+                    renderAllReviews(remoteReviews);
+                }, (error) => {
+                    // Fail silently on missing permissions and fallback to local storage / defaults
+                    isFirebaseAvailable = false;
+                    renderAllReviews([]);
+                });
+            } catch (err) {
+                isFirebaseAvailable = false;
+                renderAllReviews([]);
+            }
+        }
+
+        function createReviewCard(data) {
+            const card = document.createElement('div');
+            card.className = 'bg-dark-900 p-6 rounded-2xl border border-dark-700 relative shadow-lg hover:border-gold-500/30 transition-all';
+            
+            let starsHtml = '';
+            const rating = data.rating || 5;
+            for (let i = 0; i < 5; i++) {
+                if (i < rating) {
+                    starsHtml += '<i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>';
+                } else {
+                    starsHtml += '<i data-lucide="star" class="w-4 h-4 text-gray-600"></i>';
+                }
+            }
+
+            const name = data.name || 'Cliente Satisfecho';
+            const initials = data.initials || name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) || 'RT';
+
+            card.innerHTML = `
+                <div class="flex items-center gap-1 text-gold-400 mb-4">
+                    ${starsHtml}
+                </div>
+                <p class="text-gray-300 text-sm italic mb-6 leading-relaxed">
+                    "${data.comment || ''}"
+                </p>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gold-500/20 text-gold-400 rounded-full flex items-center justify-center font-bold text-sm border border-gold-500/30">
+                        ${initials}
+                    </div>
+                    <div>
+                        <p class="text-white font-semibold text-sm">${name}</p>
+                        <p class="text-xs text-gray-400">${data.location || 'Cliente RUMY TREJO'}</p>
+                    </div>
+                </div>
+            `;
+            return card;
+        }
+
+        // Función Principal de Inicialización
+        function initApp() {
+            if (window.lucide) lucide.createIcons();
+
+            // Menú mobile toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            }
+
+            // Función para filtrar galería
+            const filterCategory = (category) => {
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                const galleryItems = document.querySelectorAll('.gallery-item');
+
+                filterBtns.forEach(b => {
+                    if (b.getAttribute('data-filter') === category) {
+                        b.classList.add('bg-gold-500', 'text-black', 'active', 'shadow-md');
+                        b.classList.remove('bg-dark-800', 'text-gray-300');
+                    } else {
+                        b.classList.remove('bg-gold-500', 'text-black', 'active', 'shadow-md');
+                        b.classList.add('bg-dark-800', 'text-gray-300');
+                    }
+                });
+
+                galleryItems.forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            };
+
+            // Event Listeners para Filtros de la Galería
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+                    filterCategory(filter);
+                });
+            });
+
+            // Event Listeners para botones de menú / accesos directos
+            const navFilterBtns = document.querySelectorAll('.nav-filter-btn');
+            navFilterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const category = btn.getAttribute('data-category');
+                    filterCategory(category);
+                    
+                    // Cerrar menú mobile si estaba abierto
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+
+                    // Desplazamiento suave a la galería
+                    const galeriaSec = document.getElementById('galeria');
+                    if (galeriaSec) {
+                        galeriaSec.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Lightbox Modal
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-img');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                const img = item.querySelector('img');
+                if (img) {
+                    item.classList.add('cursor-pointer');
+                    item.addEventListener('click', () => {
+                        modalImg.src = img.src;
+                        modalImg.alt = img.alt || 'Vista ampliada RUMY TREJO';
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
+                        document.body.classList.add('overflow-hidden');
+                    });
+                }
+            });
+
+            const closeModal = () => {
+                if (modal) {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.classList.remove('overflow-hidden');
+                }
+            };
+
+            if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal || e.target.id === 'image-modal') closeModal();
+                });
+            }
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+
+            // Formulario de Cotización -> Construye el mensaje para WhatsApp
+            const calcForm = document.getElementById('calc-form');
+            if (calcForm) {
+                calcForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const proyecto = document.querySelector('input[name="proyecto"]:checked')?.value || 'Proyecto';
+                    const material = document.querySelector('input[name="material"]:checked')?.value || 'Piedra';
+                    const medidas = document.getElementById('medidas')?.value || 'No especificadas';
+                    const ubicacion = document.getElementById('ubicacion')?.value || 'No especificada';
+                    const detalles = document.getElementById('detalles')?.value || 'Sin detalles adicionales';
+
+                    const text = `Hola RUMY TREJO, solicito cotización:\n\n📌 *Proyecto:* ${proyecto}\n💎 *Material:* ${material}\n📐 *Medidas aproximadas:* ${medidas}\n📍 *Ubicación:* ${ubicacion}\n📝 *Detalles extra:* ${detalles}`;
+                    
+                    const waUrl = `https://wa.me/51994064958?text=${encodeURIComponent(text)}`;
+                    window.open(waUrl, '_blank');
+                });
+            }
+
+            const toggleReviewBtn = document.getElementById('toggle-review-btn');
+            const reviewFormContainer = document.getElementById('review-form-container');
+            const cancelReviewBtn = document.getElementById('cancel-review-btn');
+            const reviewForm = document.getElementById('review-form');
+            const starBtns = document.querySelectorAll('.star-btn');
+            const selectedRatingInput = document.getElementById('selected-rating');
+            const statusMsg = document.getElementById('review-status-msg');
+
+            if (toggleReviewBtn && reviewFormContainer) {
+                toggleReviewBtn.addEventListener('click', () => reviewFormContainer.classList.toggle('hidden'));
+            }
+            if (cancelReviewBtn && reviewFormContainer) {
+                cancelReviewBtn.addEventListener('click', () => reviewFormContainer.classList.add('hidden'));
+            }
+
+            starBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const rating = parseInt(btn.getAttribute('data-rating'));
+                    selectedRatingInput.value = rating;
+
+                    starBtns.forEach(b => {
+                        const bRating = parseInt(b.getAttribute('data-rating'));
+                        const icon = b.querySelector('i');
+                        if (bRating <= rating) {
+                            b.classList.add('text-gold-400');
+                            b.classList.remove('text-gray-600');
+                            if (icon) icon.classList.add('fill-gold-400');
+                        } else {
+                            b.classList.remove('text-gold-400');
+                            b.classList.add('text-gray-600');
+                            if (icon) icon.classList.remove('fill-gold-400');
+                        }
+                    });
+                });
+            });
+
+            if (reviewForm) {
+                reviewForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const name = document.getElementById('reviewer-name').value.trim();
+                    const location = document.getElementById('reviewer-location').value.trim();
+                    const comment = document.getElementById('reviewer-comment').value.trim();
+                    const rating = parseInt(selectedRatingInput.value) || 5;
+
+                    if (!name || !comment) return;
+
+                    const submitBtn = reviewForm.querySelector('button[type="submit"]');
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = 'Publicando...';
+                    }
+
+                    let savedRemotely = false;
+
+                    if (isFirebaseAvailable && currentUser) {
+                        try {
+                            await addDoc(reviewsCollectionPath, {
+                                name,
+                                location: location || 'Cliente RUMY TREJO',
+                                comment,
+                                rating,
+                                createdAt: serverTimestamp()
+                            });
+                            savedRemotely = true;
+                        } catch (err) {
+                            isFirebaseAvailable = false;
+                        }
+                    }
+
+                    if (!savedRemotely) {
+                        saveLocalReview({
+                            name,
+                            location: location || 'Cliente RUMY TREJO',
+                            comment,
+                            rating,
+                            initials: name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) || 'RT'
+                        });
+                        renderAllReviews([]);
+                    }
+
+                    if (statusMsg) {
+                        statusMsg.className = 'bg-emerald-900/80 border border-emerald-500/50 text-emerald-200 text-xs p-3 rounded-xl text-center mb-2';
+                        statusMsg.textContent = '¡Gracias! Tu opinión se ha publicado exitosamente.';
+                        statusMsg.classList.remove('hidden');
+                    }
+
+                    setTimeout(() => {
+                        reviewForm.reset();
+                        if (statusMsg) statusMsg.classList.add('hidden');
+                        reviewFormContainer.classList.add('hidden');
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = '<i data-lucide="send" class="w-4 h-4"></i> Publicar Opinión';
+                            if (window.lucide) lucide.createIcons();
+                        }
+                    }, 1800);
+                });
+            }
+        }
+
+        // Ejecutar inicialización independientemente del estado de carga del documento
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initApp);
+        } else {
+            initApp();
+        }
+    </script>
+</body>
+</html>
